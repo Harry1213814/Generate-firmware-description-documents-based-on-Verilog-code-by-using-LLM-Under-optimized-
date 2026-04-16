@@ -3,7 +3,7 @@
 该项目纯纯自娱自乐，依旧存在很多问题：
 # 项目实现：
 该项目由Reflection+Plan-and-Solve框架实现将Verilog和systemVerilog项目转换成一个人类可读的固件描述文档。
-（起因是项目甲方急要，但我自己又不想写，把文件一个一个上传给GPT又太麻烦，于是学着写了一个Agent实现这个功能。但本人只学了HelloAgent项目中Agent的经典范式，于是乎该项目完成的并不理想）
+（起因是项目甲方急要，但我自己又不想写，把文件一个一个上传给GPT又太麻烦，于是学着写了一个Agent实现这个功能。但本人只学了HelloAgent项目中Agent的经典范式(https://github.com/datawhalechina/hello-agents/blob/main/docs/chapter4/%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E6%99%BA%E8%83%BD%E4%BD%93%E7%BB%8F%E5%85%B8%E8%8C%83%E5%BC%8F%E6%9E%84%E5%BB%BA.md)，于是乎该项目完成的并不理想）
 1. 该项目会首先依次阅读工程文件中的.v或.sv代码，并生成一个摘要文件.statement.json
 2. 之后会评审该.statement.json是否全面（是否遗漏always块？assign块？代码索引是否正确？代码功能是否描述清晰等），该评审结果继续写入.statement.json中
 3. 之后根据评审结果修改.statement.json文件。直到max_feedback_rounds定义的次数。
